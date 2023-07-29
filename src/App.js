@@ -1,11 +1,14 @@
-import Cart from './components/Cart/Cart';
-import Layout from './components/Layout/Layout';
-import Products from './components/Shop/Products';
+import Cart from "./components/Cart/Cart";
+import Layout from "./components/Layout/Layout";
+import Products from "./components/Shop/Products";
+import { useSelector } from "react-redux";
 
 function App() {
+  const toggle = useSelector((state) => state.toggle.toggle);
+
   return (
     <Layout>
-      <Cart />
+      {toggle && <Cart />}
       <Products />
     </Layout>
   );
