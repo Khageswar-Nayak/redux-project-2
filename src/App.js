@@ -12,7 +12,7 @@ function App() {
   console.log(cart);
 
   useEffect(() => {
-    fetch("https://react-http-b76b2-default-rtdb.firebaseio.com/cart.json", {
+    fetch("https://redux-cart-e80d3-default-rtdb.firebaseio.com/cart.json", {
       method: "PUT",
       body: JSON.stringify(cart),
     });
@@ -22,7 +22,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://react-http-b76b2-default-rtdb.firebaseio.com/cart.json"
+          "https://redux-cart-e80d3-default-rtdb.firebaseio.com/cart.json"
         );
         const data = await response.json();
         console.log(data);
